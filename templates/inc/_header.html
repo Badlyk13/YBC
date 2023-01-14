@@ -1,0 +1,38 @@
+{% load static %}
+<div class="d-flex justify-content-between flex-wrap header-wrapper rounded-bottom fixed-top">
+  <img class="ms-3 align-self-center header-logo" src="{% static 'img/logo-white.png'%}" alt="Твой клуб лучше!" width="40" height="40">
+  <span class="align-self-center header-text">Личный кабинет</span>
+  <a class="button-show-menu align-self-center me-3" type="button" href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list align-self-center header-menu--xs d-lg-none"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+    </svg>
+  </a>
+  <div class="align-self-center d-flex justify-content-between d-none d-lg-block flex-wrap me-3 header-menu--lg">
+    <a class="button-edit-profile" type="button" href="#">
+      <img class="align-self-center header-avatar me-3 rounded-circle" src="{% static 'img/photo.jpg'%}" alt="Аватар" width="40">
+      <span class="align-self-center header-user-name">Антон Соколов</span>
+    </a>
+
+    <a class="button-exit" type="button" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right align-self-center ms-3 mb-1"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+        <path fill-rule="evenodd"
+          d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+      </svg>
+    </a>
+  </div>
+</div>
+
+<div class="dropdown-menu-xs visually-hidden">
+  <ul class="dropdown-menu-xs-list d-flex flex-column rounded-bottom">
+    <li class="dropdown-menu-xs-item"><a href="#finanses">Финансы</a></li>
+    <li class="dropdown-menu-xs-item"><a href="#statisic">Статистика</a></li>
+    <li class="dropdown-menu-xs-item"><a href="#clubs">Клубы</a></li>
+    <li class="dropdown-menu-xs-item"><a href="#mailing">Связь</a></li>
+    <li class="dropdown-menu-xs-item"><a href="#news">Новости</a></li>
+  </ul>
+</div>

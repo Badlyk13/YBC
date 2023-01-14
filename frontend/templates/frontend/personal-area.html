@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div class="personal-area-wrapper d-flex justify-content-around">
+  <!-- БИО ПОЛЬЗОВАТЕЛЯ -->
+  <div class="personal-area__bio d-flex justify-content-between me-3 ms-3 mt-3 d-lg-none">
+    <img class="align-self-center bio__avatar me-3 rounded-circle" src="{% static 'img/photo.jpg'%}" alt="Аватар" width="40">
+    <span class="align-self-center me-auto bio__user-name">Соколов Антон Николаевич<p>+79653054000</p></span>
+    <a class="align-self-center button-edit-profile" type="button" href="#"><img src="{% static 'img/edit.svg'%}" alt=""></a>
+  </div>
+  <!-- конец БИО ПОЛЬЗОВАТЕЛЯ -->
+
+  <!-- ФИНАНСЫ -->
+  <!-- <canvas class="personal-area__chart-finances m-3" name="#finances">
+    <script src="{% static "js/charts/chart-finanses-personal-area.js" %}">
+    </script>
+    <span><a href="#">Подробнее ></a></span>
+  </canvas>
+  <span class="text-end me-3 align-self-end d-lg-none"><a href="#">Подробнее <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+  </svg></a></span>
+  <!-- конец ФИНАНСЫ -->
+
+    <!-- СТАТИСТИКА-->
+  <!-- <canvas class="personal-area__chart-statistic m-3" name="#statistic">
+    <script src="{% static "js/charts/chart-statistic-personal-area.js" %}">
+    </script>
+  </canvas>
+  <span class="text-end me-3 align-self-end d-lg-none"><a href="#">Подробнее <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+  </svg></a></span> --> -->
+    <!-- конец СТАТИСТИКА -->
+
+  <!-- КЛУБЫ-->
+  <!-- <div class="personal-area__clubs d-flex flex-wrap justify-content-center mt-3">
+    <div class="club-card">,asdadaa</div>
+    <div class="club-card">,asdadaa</div>
+    <div class="club-card">,asdadaa</div>
+    <div class="club-card">,asdadaa</div>
+  </div> -->
+  <!-- конец КЛУБЫ -->
+
+    <!-- РАССЫЛКА-->
+  <!-- <div class="personal-area__mailing d-flex flex-wrap justify-content-center">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Адрес электронной почты</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Пример текстового поля</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  </div> -->
+
+  <!-- конец РАССЫЛКА -->
+
+  <!-- НОВОСТИ-->
+
+    <!-- конец НОВОСТИ -->
+  
+</div>
+
+
+<section class="personal-area-grid">
+  <div class="personal-area__bio border d-lg-none ">personal-area__bio</div>
+  <div class="chart-finances border" >
+    <canvas class="personal-area__chart-finances m-3" name="#finances">
+    <script src="{% static "js/charts/chart-finanses-personal-area.js" %}">
+    </script>
+    <span><a href="#">Подробнее ></a></span>
+    </canvas>
+    <span class="text-end me-3 align-self-end d-lg-none"><a href="#">Подробнее <svg xmlns="http://www.w3.org/2000/svg"
+          width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+        </svg></a></span>
+    
+  </div>
+  <div class="chart-statistic border" >
+      <canvas class="personal-area__chart-statistic m-3" name="#statistic">
+        <script src="{% static "js/charts/chart-statistic-personal-area.js" %}">
+        </script>
+      </canvas>
+      <span class="text-end me-3 align-self-end d-lg-none"><a href="#">Подробнее <svg xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+          </svg></a></span>
+  </div>
+  <div class="personal-area__clubs border">personal-area__clubs</div>
+  <div class="personal-area__mailing border">personal-area__mailing</div>
+  <div class="personal-area__news border">personal-area__mailing</div>
+
+</section>
+{% endblock %}

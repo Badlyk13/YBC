@@ -1,0 +1,169 @@
+:root {
+  --main-bg-color: #272727;
+  --main-accent-color: #FF652F;
+  --main-text-color: #747474;
+  --link-hover-color: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--main-bg-color);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-bg-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;;
+  
+}
+
+.main {
+  margin-top: 60px;
+}
+/* ################################## HEADER ################################## */
+
+.header-wrapper {
+  background-color: #FF652F;
+  min-height: 60px;
+}
+
+.header-text {
+  font-size: 1.2em;
+}
+
+.bi-box-arrow-right {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--main-bg-color);
+}
+
+.button-edit-profile, 
+.button-exit {
+    transition: 0.5s;
+      text-align: center;
+  color: var(--main-bg-color);
+}
+
+.button-edit-profile:hover,
+.button-edit-profile:focus,
+.button-exit:hover,
+.button-exit:focus {
+  transform: scale(1.1);
+  color: var(--main-bg-color);
+  text-shadow: var(--link-hover-color) 1px 0 10px;
+}
+
+.button-show-menu, 
+.button-show-menu:hover, 
+.button-show-menu:focus {
+  color: var(--main-bg-color);
+}
+
+/* Выпадающее меню  */
+.dropdown-menu-xs {
+  position: relative;
+}
+
+.dropdown-menu-xs-list {
+  position: absolute;
+  right: 0;
+  background-color: var(--main-accent-color);
+  width: 150px;
+  list-style-type: none;
+}
+
+.dropdown-menu-xs-item {
+  margin-bottom: 15px;
+}
+
+.dropdown-menu-xs-item a:focus{
+  color: var(--link-hover-color);
+}
+
+/* ################################## END HEADER ################################## */
+
+/* ################################## MAIN ЛИЧНЫЙ КАБИНЕТ ################################## */
+@media (min-width: 992px) {
+  .personal-area-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+}
+@media (max-width: 991px) {
+  .personal-area-wrapper{
+    flex-direction: column;
+    color: var(--main-text-color);
+  }
+}
+
+.personal-area-wrapper a{
+  color: var(--main-accent-color)
+}
+
+.personal-area-wrapper a:hover,
+.personal-area-wrapper a:focus {
+  color: var(--main-text-color);
+}
+
+.personal-area-wrapper p {
+  padding: 0;
+  margin: 0;
+  margin-top: 3px;
+}
+
+.personal-area__chart-finances,
+.personal-area__chart-statistic {
+  max-width: 390px;
+  max-height: 200px;
+  margin-top: 0;
+}
+.personal-area_clubs {
+  position: relative;
+    height: 100%;
+}
+@media (min-width: 992px) {
+  .personal-area__clubs {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 991px) {
+  .personal-area__clubs {
+    flex-direction: row;
+    color: var(--main-text-color);
+  }
+}
+.personal-area__clubs{
+  gap: 20px;
+}
+.club-card {
+  width: 150px;
+  height: 150px;
+  border: 1px solid red;
+}
+
+.personal-area-grid{
+  color: var(--main-text-color);
+}
+/* ################################## END MAIN ЛИЧНЫЙ КАБИНЕТ ################################## */
