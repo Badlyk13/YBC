@@ -1,0 +1,161 @@
+:root {
+  --main-bg-color: #272727;
+  --main-accent-color: #FF652F;
+  --main-text-color: #747474;
+  --link-hover-color: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--main-bg-color);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.3fr 1fr 2.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "menu"
+    "clubs"
+    "news";
+  margin: 16px;
+}
+
+.header {  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "avatar bio notic-icon"
+    "money-icon current-balance-text current-balance-value";
+  grid-area: header;
+  height: 70px;
+  margin-top: 8px;
+  color: var(--main-text-color);
+}
+
+.avatar {
+  justify-self: start;
+  align-self: center;
+  grid-area: avatar;
+  width: 40px;
+  height: 40px;
+}
+
+.avatar img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.bio {
+  justify-self: start;
+  align-self: center;
+  grid-area: bio;
+  padding-left: 10px;
+  font-size: large;
+}
+
+.notic-icon {
+  justify-self: center;
+  align-self: center;
+  grid-area: notic-icon;
+  width: 20px;
+  height: 20px;
+}
+
+.bi-bell {
+  font-size: 20px;
+}
+
+.money-icon {
+  justify-self: center;
+  align-self: center;
+  grid-area: money-icon;
+  width: 30px;
+  height: 30px;
+}
+
+.current-balance-text {
+  justify-self: start;
+  align-self: center;
+  grid-area: current-balance-text;
+}
+
+.current-balance-value {
+  justify-self: start;
+  align-self: center;
+  grid-area: current-balance-value;
+}
+
+.menu {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: stretch;
+  grid-template-areas:
+    "menu-item-1 menu-item-2 menu-item-3 menu-item-4";
+  grid-area: menu;
+  height: 70px;
+}
+
+.menu-item-2 { grid-area: menu-item-2; }
+
+.menu-item-3 { grid-area: menu-item-3; }
+
+.menu-item-4 { grid-area: menu-item-4; }
+
+.menu-item-1 { grid-area: menu-item-1; }
+
+.clubs {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "club-card"
+    "add-club-button";
+  grid-area: clubs;
+}
+
+.club-card { grid-area: club-card; }
+
+.add-club-button { grid-area: add-club-button; }
+
+.news {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "News-text News-text"
+    "news-card .";
+  grid-area: news;
+  height: 170px;
+}
+
+.news-card {
+  justify-self: center;
+  align-self: center;
+  grid-area: news-card;
+  width: 125px;
+  height: 125px;
+}
+
+.News-text {
+  justify-self: start;
+  align-self: center;
+  grid-area: News-text;
+}
